@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Lato", serif;
+}
+
+.form-wrapper {
+    display: flex;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 800px;
+    margin: 30vh auto;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+.form-wrapper .image-side {
+    flex: 1;
+    background: linear-gradient(65deg, #2fdbfe, #e26dff);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.form-wrapper .form-side {
+    flex: 1;
+    padding: 3rem;
+}
+
+.form-wrapper label {
+    display: flex;
+    position: absolute;
+    font-size: 0.75rem;
+    z-index: 3;
+    background-color: #ffffff;
+    translate: 10px 0px;
+}
+
+.form-wrapper input {
+    position: relative;
+    width: 100%;
+    padding: 1rem;
+    margin: 0.5rem 0;
+    border: 2px solid #eee;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.form-wrapper input:focus {
+    border-color: #e26dff;
+}
+
+.form-wrapper .submit-input  {
+    width: 100%;
+    padding: 1rem;
+    margin-top: 3rem;
+    background: #011608;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.form-wrapper .submit-input:hover {
+    transform: translateY(-2px);
+    transform: scale(1.02);
+}
+
+@media (max-width: 768px) {
+    .form-wrapper {
+        flex-direction: column;
+        margin: 10vh auto;
+        border-radius: 10px;
+    }
+    .form-wrapper button {
+        width: 100%;
+    }
+    .form-wrapper input {
+        padding: 0.5rem
+    }
+    .form-wrapper .form-side {
+        padding: 1rem;
+    }
+}
