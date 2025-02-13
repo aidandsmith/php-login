@@ -1,13 +1,9 @@
-<?php 
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PHP Login</title>
+    <title>Agent Login Portal</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -25,6 +21,9 @@
                         echo '<p>You are already logged in, and have access. If you need to log out click the button below.</p>';
                         echo '<a href="access.php">Continue</a>';
                     }else{
+                        if(isset($_GET['invalid'])) {
+                            echo "<p class='error-message'>Invalid username or password!</p>";
+                        }
                         echo '<label for="username">Username</label>';
                         echo '<input name="username" id="username" type="text" placeholder="Enter your username" required>';
                         echo '<label for="password">Password</label>';
